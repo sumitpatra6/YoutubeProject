@@ -35,7 +35,7 @@ yo.createThumbnail= function(items) {
 	$.each(items,function(index,value){
 		$("itembar").html("");
 		//console.log(value.id.videoId + " " + value.snippet.title + " " + value.snippet.thumbnails.default.url);
-		var tString = "<div class='thumbnail row' id='"+ value.id.videoId +"' onclick='enqueue(this.id)'>" +
+		var tString = "<div class='thumbnail row' id='"+ value.id.videoId +"' onclick='enqueue(this.id,,)'>" +
 				"<div class='col-md-4'><img src='"+value.snippet.thumbnails.default.url+"'/></div>" +
 						"<div class='col-md-8'>"+value.snippet.title+"</div></div>";
 		console.log(tString);
