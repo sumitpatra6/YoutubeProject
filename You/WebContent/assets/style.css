@@ -3,3 +3,22 @@
 	height:100px;
 	border:1px solid black;
 }
+
+.thumbnail-object{
+	float:left;
+	margin: auto 4px auto 4px;
+	text-align:center;
+	overflow:none;
+}
+
+#itembar{
+	margin-left:4px;
+	margin-top:40px;
+	height:500px;
+	width:420px;
+	background-color:#f9fbfc;
+	boreder: 1px solid #9b9b9b;
+	overflow:scroll;
+	padding-left:2px;
+
+}

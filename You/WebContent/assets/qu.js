@@ -43,3 +43,7 @@ function onPlayerStateChange(event){
 function stopVideo(){
   player.stopVideo();
 }
+
+function enqueue(element){
+	console.log(element);
+}
