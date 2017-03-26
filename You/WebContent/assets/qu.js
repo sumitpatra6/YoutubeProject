@@ -44,6 +44,16 @@ function stopVideo(){
   player.stopVideo();
 }
 
-function enqueue(element){
-	console.log(element);
+function playThis(id){
+	console.log(id);
+}
+
+
+/* <div class='playlist-item'>
+<img src="https://i.ytimg.com/vi/5LFdcZe7WW4/default.jpg" alt="not-found"/>
+</div> */
+function enqueue(id,title,url){
+	console.log(id+" "+title+" "+url);
+	var playListString = "<div class='playlist-item' id ='"+id+"' onclick='playThis('"+id+"')'><img src='"+url+"' alt='Thumb Not Found'/></div>"
+	$("#playList").append(playListString);
 }
