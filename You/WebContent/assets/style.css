@@ -1,3 +1,7 @@
+body{
+	min-width:1222px;
+}
+
 .thumbnail{
 	width:400px !important;
 	height:100px;
@@ -14,7 +18,7 @@
 
 #itembar{
 	margin-left:4px;
-	height:600px;
+	height:500px;
 	width:420px;
 	background-color:#f9fbfc;
 	boreder: 1px solid #9b9b9b;

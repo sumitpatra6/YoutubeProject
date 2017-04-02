@@ -3,7 +3,7 @@
  */
 //script file for youtube project
 //BBSE4dA4aLg,IZ0IhkGSXN0,BBSE4dA4aLg
-var videoBoxArray = ['DhDzYg0i1HY','IZ0IhkGSXN0','Xcm4ZBR-VCc'];
+var videoBoxArray = ['DhDzYg0i1HY'];
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -33,8 +33,11 @@ var done = false;
 function onPlayerStateChange(event){
   if(event.data == YT.PlayerState.ENDED ){
     console.log("video ended!");
-    var id = videoBoxArray[0];
+    cleanQueue(videoBoxArray[0]);
+    console.log(event);
+    
     videoBoxArray.shift();
+    var id = videoBoxArray[0];
     event.target.loadVideoById(id,5,"large");
 
   }
@@ -56,4 +59,31 @@ function enqueue(id,title,url){
 	console.log(id+" "+title+" "+url);
 	var playListString = "<div class='playlist-item' id ='"+id+"' onclick='playThis('"+id+"')'><img src='"+url+"' alt='Thumb Not Found'/></div>"
 	$("#playList").append(playListString);
+	postEnqueueAction(id);
 }
+
+function postEnqueueAction(id){
+	console.log("Pushing video to array!");
+	videoBoxArray.push(id);
+}
+
+function playThis(id){
+	console.log('id');
+}
+
+function cleanQueue(id){
+	//TODO: clean the queue
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
